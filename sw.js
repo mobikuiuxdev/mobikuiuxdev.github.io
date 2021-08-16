@@ -1,1 +1,50 @@
-self.addEventListener("install",i=>{i.waitUntil(caches.open("v5").then(i=>i.addAll(["/","manifest.json"]).then(function(){console.log("Success! App is available offline!")})))}),self.addEventListener("fetch",i=>{i.respondWith(caches.match(i.request).then(n=>n||fetch(i.request)))});
+//This is the service worker with the Advanced caching
+
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+const HTML_CACHE = "html";
+const JS_CACHE = "javascript";
+const IMAGE_CACHE = "images";
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
+workbox.routing.registerRoute(
+  ({event}) => event.request.destination === 'document',
+  new workbox.strategies.NetworkFirst({
+    cacheName: HTML_CACHE,
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 10,
+      }),
+    ],
+  })
+);
+
+workbox.routing.registerRoute(
+  ({event}) => event.request.destination === 'script',
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: JS_CACHE,
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 15,
+      }),
+    ],
+  })
+);
+
+
+workbox.routing.registerRoute(
+  ({event}) => event.request.destination === 'image',
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: IMAGE_CACHE,
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 15,
+      }),
+    ],
+  })
+);
