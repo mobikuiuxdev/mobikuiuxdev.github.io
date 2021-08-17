@@ -1,50 +1,20 @@
-//This is the service worker with the Advanced caching
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-const HTML_CACHE = "html";
-const JS_CACHE = "javascript";
-const IMAGE_CACHE = "images";
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
+const cacheName = 'demo_01';
+const precacheResources = ['/', 'index.html', 'manifest.json'];
+self.addEventListener('install', (event) => {
+  console.log('Service worker install event!');
+  event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(precacheResources)));
 });
-
-workbox.routing.registerRoute(
-  ({event}) => event.request.destination === 'document',
-  new workbox.strategies.NetworkFirst({
-    cacheName: HTML_CACHE,
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 10,
-      }),
-    ],
-  })
-);
-
-workbox.routing.registerRoute(
-  ({event}) => event.request.destination === 'script',
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: JS_CACHE,
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 15,
-      }),
-    ],
-  })
-);
-
-
-workbox.routing.registerRoute(
-  ({event}) => event.request.destination === 'image',
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: IMAGE_CACHE,
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 15,
-      }),
-    ],
-  })
-);
+self.addEventListener('activate', (event) => {
+  console.log('Service worker activate event!');
+});
+self.addEventListener('fetch', (event) => {
+  console.log('Fetch intercepted for:', event.request.url);
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request);
+    }),
+  );
+});
