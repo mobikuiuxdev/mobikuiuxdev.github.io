@@ -6,11 +6,11 @@
 	, "display": "standalone"
 	, "start_url": "/"
 	, "icons": [{
-		"src": "large_icon.png.png"
+		"src": "large_icon.png"
 		, "type": "image/png"
 		, "sizes": "1024x1024"
 	}, {
-		"src": "maskable_icon.png"
+		"src": "large_icon.png"
 		, "type": "image/png"
 		, "sizes": "1024x1024"
 		, "purpose": "maskable"
