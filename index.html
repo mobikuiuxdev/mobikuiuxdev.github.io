@@ -659,6 +659,6 @@ input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:po
     </div>
   </div>
 		</main>
-		<script>if ("serviceWorker" in navigator){ window.addEventListener("load", async () => { try { const reg = await navigator.serviceWorker.register("sw.js"); console.log("Service worker registered!", reg); } catch (err) { console.log("Service worker registration failed: ", err); } }); }</script>
+		<script>if('serviceWorker'in navigator){navigator.serviceWorker.register('sw.js',{updateViaCache: 'none',});}</script>
 	</body>
 </html>
