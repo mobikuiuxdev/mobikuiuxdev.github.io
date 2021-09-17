@@ -16,7 +16,7 @@
 		.form-checkbox label{line-height:16px;margin-top:16px;} 
 input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:pointer;margin:0 8px 3px 0;}
 		@media not screen and (max-width:960px){header{display:flex;background:#FFF;max-height:64px;min-height:64px;width:100%;box-shadow:0px 1px 0 rgb(0 0 0 / 8%)}a:hover{transition:all .3s;}nav a:hover{background-color:#fef3d6;border-radius:0 50px 50px 0;}.box-content a:hover{color:#f90;}}@media(max-width:1136px){.box-50{width:calc(100% - 16px);}}@media(max-width:960px){html{font-size:14px;}body{flex-direction:column;}aside{flex:0;}h1{text-align:center;}.box-50{width:calc(50% - 16px);}.wrap-aside{height:56px;background:#FFF;box-shadow:0 2px 4px 0 rgb(0 0 0 / 8%);justify-content:space-between;margin:0;padding:16px 24px;}nav{top:0;background:#FFF;transform:translateX(-100%);transition:.3s;}nav a{line-height:48px;}.menu-open{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 19h16v-2H4v2zm0-6h16v-2H4v2zm0-8v2h16V5H4z' fill='%23595959'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer;width:24px;height:24px;}.menu-close{display:none;}#menu-toggle:checked~.menu-open{display:none;}#menu-toggle:checked~.menu-close{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.5L17.5 5 12 10.5 6.5 5 5 6.5l5.5 5.5L5 17.5 6.5 19l5.5-5.4 5.5 5.4 1.5-1.5-5.5-5.5L19 6.5z' fill='%23FFFFFF'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer;width:24px;height:24px;z-index:1000;}.overlay{display:none;}#menu-toggle:checked~.overlay{display:block;position:fixed;top:0;left:0;height:100%;width:100%;background-color:rgba(0,0,0,.72);}#menu-toggle:checked~nav{transform:translateX(0);list-style:none;}}@media(max-width:768px){aside,main{flex:1 1 auto;width:100%;max-width:100%;}.box-50{width:calc(100% - 16px);}}</style>
-		<title>CWP PWA V1</title>		
+		<title>CWP PWA V3</title>		
 		<link rel="manifest" href="manifest.json">
 		<meta name="description" content="CWP PWA">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#FAB600">
@@ -36,9 +36,9 @@ input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:po
 				<label class="overlay" for="menu-toggle"></label>			
 				<nav>
 					<div class="user-card"><span class="ava"></span><div class="list-card-user"><span>Перевершник</span><span>Адміністратор</span></div></div>
-					<a href="index.html" id="selected" title="v1"><span class="icon i-07"></span>W-Page v1</a>
+					<a href="index.html" title="v1"><span class="icon i-07"></span>W-Page v1</a>
 					<a href="index_v2.html" title="v2"><span class="icon i-07"></span>W-Page v2</a>
-					<a href="index_v3.html" title="v3"><span class="icon i-07"></span>W-Page v3</a>
+					<a href="index_v3.html" id="selected" title="v3"><span class="icon i-07"></span>W-Page v3</a>
 					<a href="#" title="Article page"><span class="icon i-07"></span>Performance</a>
 					<a href="#" title="Forms page"><span class="icon i-07"></span>Sucessions</a>
 					<a href="login.html" title="Login"><span class="icon i-07"></span>Login</a>
@@ -60,109 +60,233 @@ input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:po
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-03"></span><span>Online training in progress</span>
+										<span class="icon i-19"></span>
+                    <span>Your upcoming sessions</span>
                 </div>
                 <div class="box-content row-2">
 									<div class="list-head-row">
 											<span>Name</span>
-											<span>Action</span>
+											<span>Status</span>
 									</div>
                     <div class="list-oneline-row">
-												<a href="#modal-one">Online training:<br>Management skills C-01</a>
-												<a href="#modal-one">Open training</a>
+												<a href="#modal-one">Your upcoming session (Starts 02/07/2021)</a>
+												<span>Сompleted</span>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Online training:<br>Management skills C-02</a>
-                        <a href="#modal-one">Open training</a>
+												<a href="#modal-one">Your upcoming session (Starts 21/09/2021)</a>
+												<span>Preference</span>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Online training:<br>Management skills C-03</a>
-												<a href="#modal-one">Open training</a>
+												<a href="#modal-one">Your upcoming session (Starts 22/09/2021)</a>
+												<span>Preference</span>
                     </div>
                 </div>
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-04"></span>
-                    <span>To do's</span>
+										<span class="icon i-15"></span>
+                    <span>Your interest & waitlist tracking</span>
                 </div>
-                <div class="box-content row-3">
+                <div class="box-content row-2">
 									<div class="list-head-row">
 											<span>Name</span>
-											<span>Progress</span>
-											<span>Due date</span>
+											<span>Status</span>
 									</div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">To do item 01</a>
-                        <span>100%</span>
-												<span>27/07/21</span>
+												<span><a class="row-s" href="#modal-one">Waitlist item</a> - (Starts: 02/07/2021)<br>Location: Kyiv<br>Start time: 10:05</span>
+												<span>Waitlisted</span>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">To do item 02</a>
-                        <span>23%</span>
-												<span>25/08/21</span>
-                    </div>
-                    <div class="list-oneline-row">
-                        <a href="#modal-one">To do item 03</a>
-                        <span>0%</span>
-												<span>29/08/21</span>
+												<span><a class="row-s" href="#modal-one">Waitlist item</a> - (Starts: 02/07/2021)<br>Location: Kyiv<br>Start time: 10:05</span>
+												<span>Waitlisted</span>
                     </div>
                 </div>
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-05"></span>
-                    <span>Your assigned training</span>
+										<span class="icon i-17"></span>
+                    <span>Social feed</span>
                 </div>
-                <div class="box-content row-3">
+                <div class="box-content scroll">
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br>
+<a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                    <div class="list-oneline-row">
+												<span class="row-ava"></span>
+												<span><a href="#modal-one">Jennifer Bennet</a><br>
+												has rated the training Business communication<br><small>23/07/21 12:32</small><br><a href="#modal-one"><small>Comments: 0</small></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-07"></span>
+                    <span>Browse for training</span>
+                </div>
+                <div class="box-content">
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Browse for training 01</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Browse for training 02</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Browse for training 03</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-20"></span>
+                    <span>Your tasks</span>
+                </div>
+                <div class="box-content row-2">
 									<div class="list-head-row">
 											<span>Title</span>
 											<span>Due date</span>
-											<span>Action</span>
 									</div>
-                    <div class="list-oneline-row">                       
-                        <span>Developing critical leadership skills (includes simulation)</span>
+                    <div class="list-oneline-row">
+												<span>Your tasks item 01</span>
 												<span>01/06/21</span>
-												<a href="#modal-one">Launch</a>
                     </div>
-                    <div class="list-oneline-row">                       
-                        <span>The ultimate sales improvment skill</span>
-												<span>04/07/21</span>
-												<a href="#modal-one">Launch</a>
+                    <div class="list-oneline-row">
+												<span>Your tasks item 01</span>
+												<span>01/07/21</span>
                     </div>
-                    <div class="list-oneline-row">                       
-                        <span>Getting the most out of your day (includes simulation)</span>
-												<span>21/08/21</span>
-												<a href="#modal-one">Launch</a>
+                    <div class="list-oneline-row">
+												<span>Your tasks item 01</span>
+												<span>02/09/21</span>
                     </div>
                 </div>
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-06"></span>
-                    <span>Required training</span>
+										<span class="icon i-07"></span>
+                    <span>Your action items</span>
                 </div>
-                <div class="box-content row-3">
+                <div class="box-content row-2">
 									<div class="list-head-row">
-											<span>Name</span>
-											<span>Type</span>
-											<span>Option</span>
+											<span>Title</span>
+											<span>Due date</span>
 									</div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Required training 01</a>
-                        <span>Online</span>
-												<a href="#modal-one">Option</a>
+												<a href="#modal-one">Launch: Applying leadership principles 01</a>
+												<span>01/06/21</span>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Required training 02</a>
-                        <span>Online</span>
-												<a href="#modal-one">Option</a>
+												<a href="#modal-one">Launch: Applying leadership principles 02</a>
+												<span>01/07/21</span>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Required training 03</a>
-                        <span>Offline</span>
-												<a href="#modal-one">Option</a>
+												<a href="#modal-one">Launch: Applying leadership principles 03</a>
+												<span>02/09/21</span>
                     </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head calendar">
+										<span class="icon left"></span>
+                    <span>August 2021</span>
+										<span class="icon right"></span>
+                </div>
+                <div class="box-content-calendar">
+									<div class="list-head-row">
+											<span>Sun</span>
+											<span>Mon</span>
+											<span>Tue</span>
+											<span>Wed </span>
+											<span>Thu </span>
+											<span>Fri</span>
+											<span>Sat</span>
+									</div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">01</a>
+                        <a href="#modal-one">02</a>
+                        <a href="#modal-one">03</a>
+                        <a href="#modal-one">04</a>
+                        <a href="#modal-one">05</a>
+                        <a href="#modal-one">06</a>
+                        <a href="#modal-one">07</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">08</a>
+                        <a href="#modal-one">09</a>
+                        <a href="#modal-one">10</a>
+                        <a href="#modal-one">11</a>
+                        <a href="#modal-one">12</a>
+                        <a href="#modal-one">13</a>
+                        <a href="#modal-one">14</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">15</a>
+                        <a href="#modal-one">16</a>
+                        <a href="#modal-one">17</a>
+                        <a href="#modal-one">18</a>
+                        <a href="#modal-one">19</a>
+                        <a href="#modal-one">20</a>
+                        <a href="#modal-one">21</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">22</a>
+                        <a href="#modal-one">23</a>
+                        <a href="#modal-one">24</a>
+                        <a href="#modal-one">25</a>
+                        <a href="#modal-one">26</a>
+                        <a href="#modal-one">27</a>
+                        <a href="#modal-one">28</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">29</a>
+                        <a href="#modal-one">30</a>
+                        <a href="#modal-one">31</a>
+												<span class="disable">01</span>
+												<span class="disable">02</span>
+												<span class="disable">03</span>
+												<span class="disable">04</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-07"></span>
+                    <span>Some widget</span>
+                </div>
+                <div class="box-content-empty">
+										<span>No tasks</span>
+                    <span class="empty-state es-1"></span>
                 </div>
             </div>
         </div>

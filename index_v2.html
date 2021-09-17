@@ -16,7 +16,7 @@
 		.form-checkbox label{line-height:16px;margin-top:16px;} 
 input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:pointer;margin:0 8px 3px 0;}
 		@media not screen and (max-width:960px){header{display:flex;background:#FFF;max-height:64px;min-height:64px;width:100%;box-shadow:0px 1px 0 rgb(0 0 0 / 8%)}a:hover{transition:all .3s;}nav a:hover{background-color:#fef3d6;border-radius:0 50px 50px 0;}.box-content a:hover{color:#f90;}}@media(max-width:1136px){.box-50{width:calc(100% - 16px);}}@media(max-width:960px){html{font-size:14px;}body{flex-direction:column;}aside{flex:0;}h1{text-align:center;}.box-50{width:calc(50% - 16px);}.wrap-aside{height:56px;background:#FFF;box-shadow:0 2px 4px 0 rgb(0 0 0 / 8%);justify-content:space-between;margin:0;padding:16px 24px;}nav{top:0;background:#FFF;transform:translateX(-100%);transition:.3s;}nav a{line-height:48px;}.menu-open{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 19h16v-2H4v2zm0-6h16v-2H4v2zm0-8v2h16V5H4z' fill='%23595959'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer;width:24px;height:24px;}.menu-close{display:none;}#menu-toggle:checked~.menu-open{display:none;}#menu-toggle:checked~.menu-close{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.5L17.5 5 12 10.5 6.5 5 5 6.5l5.5 5.5L5 17.5 6.5 19l5.5-5.4 5.5 5.4 1.5-1.5-5.5-5.5L19 6.5z' fill='%23FFFFFF'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer;width:24px;height:24px;z-index:1000;}.overlay{display:none;}#menu-toggle:checked~.overlay{display:block;position:fixed;top:0;left:0;height:100%;width:100%;background-color:rgba(0,0,0,.72);}#menu-toggle:checked~nav{transform:translateX(0);list-style:none;}}@media(max-width:768px){aside,main{flex:1 1 auto;width:100%;max-width:100%;}.box-50{width:calc(100% - 16px);}}</style>
-		<title>CWP PWA V1</title>		
+		<title>CWP PWA V2</title>		
 		<link rel="manifest" href="manifest.json">
 		<meta name="description" content="CWP PWA">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#FAB600">
@@ -36,8 +36,8 @@ input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:po
 				<label class="overlay" for="menu-toggle"></label>			
 				<nav>
 					<div class="user-card"><span class="ava"></span><div class="list-card-user"><span>Перевершник</span><span>Адміністратор</span></div></div>
-					<a href="index.html" id="selected" title="v1"><span class="icon i-07"></span>W-Page v1</a>
-					<a href="index_v2.html" title="v2"><span class="icon i-07"></span>W-Page v2</a>
+					<a href="index.html" title="v1"><span class="icon i-07"></span>W-Page v1</a>
+					<a href="index_v2.html" id="selected" title="v2"><span class="icon i-07"></span>W-Page v2</a>
 					<a href="index_v3.html" title="v3"><span class="icon i-07"></span>W-Page v3</a>
 					<a href="#" title="Article page"><span class="icon i-07"></span>Performance</a>
 					<a href="#" title="Forms page"><span class="icon i-07"></span>Sucessions</a>
@@ -60,59 +60,120 @@ input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:po
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-03"></span><span>Online training in progress</span>
+										<span class="icon i-01"></span>
+                    <span>Your inbox</span>
                 </div>
-                <div class="box-content row-2">
-									<div class="list-head-row">
-											<span>Name</span>
-											<span>Action</span>
-									</div>
-                    <div class="list-oneline-row">
-												<a href="#modal-one">Online training:<br>Management skills C-01</a>
-												<a href="#modal-one">Open training</a>
+                <div class="box-content">
+                    <div class="list-twoline-row">
+                        <a href="#modal-one">View transcript</a>
+                        <span>(Approved training selections: 0)<br>(Registered for training selections: 17)</span>
                     </div>
-                    <div class="list-oneline-row">
-                        <a href="#modal-one">Online training:<br>Management skills C-02</a>
-                        <a href="#modal-one">Open training</a>
-                    </div>
-                    <div class="list-oneline-row">
-                        <a href="#modal-one">Online training:<br>Management skills C-03</a>
-												<a href="#modal-one">Open training</a>
+                    <div class="list-twoline-row">
+                        <a href="#modal-one">View announcements</a>
+                        <span>(Massages: 0)</span>
                     </div>
                 </div>
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-04"></span>
-                    <span>To do's</span>
+										<span class="icon i-02"></span>
+                    <span>My training</span>
                 </div>
                 <div class="box-content row-3">
 									<div class="list-head-row">
 											<span>Name</span>
-											<span>Progress</span>
 											<span>Due date</span>
+											<span>Action</span>
 									</div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">To do item 01</a>
-                        <span>100%</span>
-												<span>27/07/21</span>
+                        <a href="#modal-one">Required training 01</a>
+                        <span>25/08/22</span>
+                        <a href="#modal-one">Action</a>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">To do item 02</a>
-                        <span>23%</span>
-												<span>25/08/21</span>
+                        <a href="#modal-one">Required training 01</a>
+                        <span>25/08/22</span>
+                        <a href="#modal-one">Action</a>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">To do item 03</a>
-                        <span>0%</span>
-												<span>29/08/21</span>
+                        <a href="#modal-one">Required training 01</a>
+                        <span>25/08/22</span>
+                        <a href="#modal-one">Action</a>
                     </div>
                 </div>
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-05"></span>
-                    <span>Your assigned training</span>
+										<span class="icon i-07"></span>
+                    <span>Suggested training</span>
+                </div>
+                <div class="box-content">
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Suggested training 01</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Suggested training 02</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Suggested training 03</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Suggested training 04</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-08"></span>
+                    <span>Certifications</span>
+                </div>
+                <div class="box-content row-3">
+									<div class="list-head-row">
+											<span>Name</span>
+											<span>Due date</span>
+											<span>Expiration</span>
+									</div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Certification item 01</a>
+                        <span>02/07/21 11:24</span>
+												<span>02/07/22 11:24</span>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#openModal">Certification item 02</a>
+                        <span>02/07/21 11:24</span>
+												<span>02/07/22 11:24</span>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#openModal">Certification item 03</a>
+                        <span>02/07/21 11:24</span>
+												<span>02/07/22 11:24</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-09"></span>
+                    <span>Featured training</span>
+                </div>
+                <div class="box-content">
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Featured training 01</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Featured training 02</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Featured training 03</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Featured training 04</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-10"></span>
+                    <span>Your transcript</span>
                 </div>
                 <div class="box-content row-3">
 									<div class="list-head-row">
@@ -120,48 +181,136 @@ input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:po
 											<span>Due date</span>
 											<span>Action</span>
 									</div>
-                    <div class="list-oneline-row">                       
-                        <span>Developing critical leadership skills (includes simulation)</span>
-												<span>01/06/21</span>
-												<a href="#modal-one">Launch</a>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Transcript item 01</a>
+                        <span>25/08/21</span>
+                        <a href="#modal-one">Action</a>
                     </div>
-                    <div class="list-oneline-row">                       
-                        <span>The ultimate sales improvment skill</span>
-												<span>04/07/21</span>
-												<a href="#modal-one">Launch</a>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Transcript item 02</a>
+                        <span>25/08/21</span>
+                        <a href="#modal-one">Action</a>
                     </div>
-                    <div class="list-oneline-row">                       
-                        <span>Getting the most out of your day (includes simulation)</span>
-												<span>21/08/21</span>
-												<a href="#modal-one">Launch</a>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Transcript item 03</a>
+                        <span>25/10/21</span>
+                        <a href="#modal-one">Action</a>
                     </div>
                 </div>
             </div>
             <div class="box-50 widget-box">
                 <div class="box-head">
-										<span class="icon i-06"></span>
-                    <span>Required training</span>
+										<span class="icon i-11"></span>
+                    <span>Training in progress</span>
                 </div>
-                <div class="box-content row-3">
+                <div class="box-content row-2">
 									<div class="list-head-row">
-											<span>Name</span>
-											<span>Type</span>
-											<span>Option</span>
+											<span>Title</span>
+											<span>Action</span>
 									</div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Required training 01</a>
-                        <span>Online</span>
-												<a href="#modal-one">Option</a>
+												<a href="#modal-one">Management skills</a>
+												<a href="#modal-one">Start</a>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Required training 02</a>
-                        <span>Online</span>
-												<a href="#modal-one">Option</a>
+												<a href="#modal-one">Management skills</a>
+												<a href="#modal-one">Start</a>
                     </div>
                     <div class="list-oneline-row">
-                        <a href="#modal-one">Required training 03</a>
-                        <span>Offline</span>
-												<a href="#modal-one">Option</a>
+												<a href="#modal-one">New hire onboarding</a>
+												<a href="#modal-one">Start</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-12"></span>
+                    <span>Referrals</span>
+                </div>
+                <div class="box-content row-4">
+									<div class="list-head-row">
+											<span>Job Title</span>
+											<span>Location</span>
+											<span>Bonus</span>
+											<span>Refer jobs</span>
+									</div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Sales manager</a>
+                        <span>Kyiv</span>
+												<span>₴ 5000</span>
+												<a href="#modal-one">Refer job</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">Director, Sales</a>
+                        <span>Kyiv</span>
+												<span>₴ 5000</span>
+												<a href="#modal-one">Refer job</a>
+                    </div>
+                    <div class="list-oneline-row">
+                        <a href="#modal-one">C# Developer</a>
+                        <span>Kyiv</span>
+												<span>₴ 5000</span>
+												<a href="#modal-one">Refer job</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-13"></span>
+                    <span>Pending evaluations</span>
+                </div>
+                <div class="box-content row-2">
+									<div class="list-head-row">
+											<span>Name</span>
+											<span>Action</span>
+									</div>
+                    <div class="list-oneline-row">
+												<a href="#modal-one">Pending evaluation test 01</a>
+												<a href="#modal-one">Evaluate</a>
+                    </div>
+                    <div class="list-oneline-row">
+												<a href="#modal-one">Pending evaluation test 02</a>
+												<a href="#modal-one">Evaluate</a>
+                    </div>
+                    <div class="list-oneline-row">
+												<a href="#modal-one">Pending evaluation test 03</a>
+												<a href="#modal-one">Evaluate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-50 widget-box">
+                <div class="box-head">
+										<span class="icon i-16"></span>
+                    <span>Job search</span>
+                </div>
+                <div class="box-content row-2">
+                    <div class="list-oneline-row">
+											<div class="form">
+												<button type="submit" aria-label="Search"></button>
+												<input class="input-search" placeholder="Search..." >	
+													<div class="form-checkbox">	
+															<label>
+																	<input type="checkbox">
+																	Only include open jobs
+															</label>
+													</div>
+											</div>
+                    </div>
+									<div class="list-head-row">
+											<span>Job title</span>
+											<span>Location</span>
+									</div>
+                    <div class="list-oneline-row">
+												<a href="#modal-one">Sales manager</a>
+												<span>Kyiv</span>
+                    </div>
+                    <div class="list-oneline-row">
+												<a href="#modal-one">Sales manager</a>
+												<span>Kyiv</span>
+                    </div>
+                    <div class="list-oneline-row">
+												<a href="#modal-one">Sales manager</a>
+												<span>Kyiv</span>
                     </div>
                 </div>
             </div>
