@@ -1,7 +1,7 @@
 {
   "name": "CWP PWA",
-  "short_name": "СЦЗ",
-  "start_url": "/",
+  "short_name": "CWP",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#FAB600",
   "theme_color": "#FAB600",
