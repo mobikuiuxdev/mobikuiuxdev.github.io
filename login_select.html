@@ -53,8 +53,8 @@
 		details > summary{list-style:none;padding-left:16px}
 		details[open]{background-color:rgba(255,255,255,0.04);border-radius:0 24px 24px 0;overflow:hidden;margin-bottom:8px;}
 		#selected,.selected{color:#000;background-color:#fab600;border-radius:0 50px 50px 0;}.selected{border-radius:0}
-		main{display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:space-around;align-content:center;align-items:center;padding:48px 0;margin:0;}
-		.bg{min-height:100vh;display:flex;flex-direction:row;padding:48px;flex-wrap:wrap;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' fill='none'%3E%3Cpath fill='%234B4B4B' d='M0 0h800v600H0z'/%3E%3Cpath fill='%23FAB600' d='M0 0h800v600H0z'/%3E%3Cpath fill='%23ECA321' fill-opacity='.4' d='M178 429a32 32 0 0 1-1-45L509 21c12-13 32-13 45-1s13 32 1 45L223 428a32 32 0 0 1-45 1Zm186-40a32 32 0 0 1-3-45l188-212c12-13 32-14 46-3 13 12 14 32 3 45L409 386a32 32 0 0 1-45 3ZM183 581a32 32 0 0 1-3-45l120-126c12-14 32-15 45-3 13 11 15 31 3 45L228 578a32 32 0 0 1-45 3Zm9-320a32 32 0 0 1-3-45L309 90c11-14 32-15 45-3 13 11 15 31 3 44L237 258a32 32 0 0 1-45 3Zm186 289a32 32 0 0 1-3-45l201-233c12-13 32-14 45-3a32 32 0 0 1 3 45L423 547a32 32 0 0 1-45 3Z'/%3E%3C/svg%3E")no-repeat center;background-size:cover}
+		main{min-height:100vh;display:flex;flex-direction:column;padding:48px 0;margin:0;justify-content:center;flex-wrap:wrap;align-items:center;align-content: center;}
+		.bg{padding:48px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' fill='none'%3E%3Cpath fill='%234B4B4B' d='M0 0h800v600H0z'/%3E%3Cpath fill='%23FAB600' d='M0 0h800v600H0z'/%3E%3Cpath fill='%23ECA321' fill-opacity='.4' d='M178 429a32 32 0 0 1-1-45L509 21c12-13 32-13 45-1s13 32 1 45L223 428a32 32 0 0 1-45 1Zm186-40a32 32 0 0 1-3-45l188-212c12-13 32-14 46-3 13 12 14 32 3 45L409 386a32 32 0 0 1-45 3ZM183 581a32 32 0 0 1-3-45l120-126c12-14 32-15 45-3 13 11 15 31 3 45L228 578a32 32 0 0 1-45 3Zm9-320a32 32 0 0 1-3-45L309 90c11-14 32-15 45-3 13 11 15 31 3 44L237 258a32 32 0 0 1-45 3Zm186 289a32 32 0 0 1-3-45l201-233c12-13 32-14 45-3a32 32 0 0 1 3 45L423 547a32 32 0 0 1-45 3Z'/%3E%3C/svg%3E")no-repeat center;background-size:cover}
 		h1{width:100%;font-size:1.6em;font-weight:500;text-align:left;margin-bottom:32px;}
 		a{text-decoration:none;font-weight:500;}
 		.flex-wrap,.wrap{display:flex;flex-direction:row;flex-wrap:wrap;align-content:center;align-items:center;width:100%;max-width:1280px;padding:0 32px;margin:40px -16px;}
@@ -124,11 +124,21 @@
 		.form-checkbox label{line-height:16px;}label{line-height:1;text-align:left;cursor:pointer;}
 		.form-checkbox label{line-height:16px;margin-top:16px;}
 		input[type="checkbox"]{border:1px solid #dadada;width:16px;height:16px;cursor:pointer;margin:0 8px 3px 0;}
+		.lm,.dm{margin-bottom:24px}
+		.dm{width:24px;height:24px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Crect fill='none' height='24' width='24'/%3E%3Cpath d='M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer}
+		.lm{display:none;}
+		#color-toggle:checked ~ main.bg >.lm{width:24px;height:24px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='%23FFFFFF'%3E%3Crect fill='none' height='24' width='24'/%3E%3Cpath d='M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z'/%3E%3C/svg%3E")no-repeat center;
+		display:block;cursor:pointer}
+		#color-toggle:checked ~ main.bg >.dm{display: none}
+		input[type="checkbox"]#color-toggle{display:none} #color-toggle:checked~.dm{display:none;}
+		#color-toggle:checked~.bg{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' fill='none'%3E%3Cpath fill='%234B4B4B' d='M0 0h800v600H0z'/%3E%3Cpath fill='%2314161A' d='M0 0h800v600H0z'/%3E%3Cpath fill='%2316181C' d='M178 429a32 32 0 0 1-1-45L509 21c12-13 32-13 45-1s13 32 1 45L223 428a32 32 0 0 1-45 1Zm186-40a32 32 0 0 1-3-45l188-212c12-13 32-14 46-3 13 12 14 32 3 45L409 386a32 32 0 0 1-45 3ZM183 581a32 32 0 0 1-3-45l120-126c12-14 32-15 45-3 13 11 15 31 3 45L228 578a32 32 0 0 1-45 3Zm9-320a32 32 0 0 1-3-45L309 90c11-14 32-15 45-3 13 11 15 31 3 44L237 258a32 32 0 0 1-45 3Zm186 289a32 32 0 0 1-3-45l201-233c12-13 32-14 45-3a32 32 0 0 1 3 45L423 547a32 32 0 0 1-45 3Z'/%3E%3C/svg%3E")no-repeat center;background-size:cover}
+		#color-toggle:checked ~ main.bg > form.box-30{background-color:#191b20}
+		header{min-height:48px;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:space-around;align-content:center;align-items:center}
 		@media not screen and (max-width:1136px){a:hover, details a:hover,.primary:hover,.secondary:hover{transition:all .3s;}.primary:hover,.secondary:hover{background-color:#fef3d6}summary:hover,nav a:hover{background-color:#fef3d6;border-radius:0 50px 50px 0;}details a:hover{background-color:rgba(250,182,0,.32);border-radius:0;}.box-content a:hover{color:#f90;}}
 		@media screen and (max-width:1024px){body{font-size:14px}.header-row,.flex-wrap,.wrap{padding:8px 16px;}form.box-30{width:calc(50% - 8px);}.box-30,.box-30-widget,.box-50-widget{width:calc(50% - 8px);margin:0 0 16px}.box-70,.box-70-widget,.box-100,.box-100-widget{width:calc(100% - 8px);margin:0 0 16px;}}
 		@media screen and (max-width:768px){.flex-wrap{flex-direction:column;}.box-30,.box-50,.box-30-widget,.box-50-widget{width:calc(100% - 8px);}form.box-30{width:calc(80% - 8px)}}
 		@media screen and (max-width:420px){.bg{padding:8px}form.box-30{width:calc(100% - 8px)}.buttons{flex-direction:column}.primary,.secondary{width:calc(100% - 8px)}}
-</style>
+	</style>
 	<title>CWP PWA Login</title>
 	<link rel="shortcut icon" href="favicon-32x32.png">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -140,8 +150,11 @@
 	<link rel="manifest" href="manifest.json">
 </head>
 <body>
-	<main class="bg">          
-			<form class="box-30">	
+	<input id="color-toggle" type="checkbox">
+	<main class="bg">    
+				<label class="dm" for="color-toggle"></label>
+				<label class="lm" for="color-toggle"></label>      
+				<form class="box-30">	
 				<a href="index.html" class="logo" aria-label="Test logo">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 24"><path fill="#999999" d="M48 16v2H34v-2h14zm-27-5v2h-5v-2h5zm-6 8h-2v1L3 12l10-8v4h7V6h-5V0L0 12l15 12v-5zM31 16v2H18v-2h13zM27 11v2h-4v-2h4zM33 6v2H22V6h11zM40 11v2h-8v-2h8z" /> </svg>
 				</a>
