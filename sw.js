@@ -1,1 +1,21 @@
-const cacheName='2-version-04-11',precacheResources=['manifest.json'];self.addEventListener('install',e=>{e.waitUntil(caches.open('2-version-04-11').then(e=>e.addAll(precacheResources)))}),addEventListener('activate',e=>{e.waitUntil(async function(){self.registration.navigationPreload&&await self.registration.navigationPreload.enable()}())}),addEventListener('fetch',e=>{e.respondWith(async function(){const t=await caches.match(e.request);if(t)return t;const a=await e.preloadResponse;return a||fetch(e.request)}())});
+this.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open('v1').then(function(cache) {
+            return cache.addAll([
+								'/',
+								'manifest.json'								
+            ])
+            .then(function() {
+                console.log('Success! App is available offline!');
+            })
+        })
+    );
+});
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request)
+        .then(function(response) {
+            return response || fetch(event.request);
+        })
+    );
+});
