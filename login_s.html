@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+					* {box-sizing:border-box;border-radius:8px}
+					body{font:14px system-ui,sans-serif;margin:0;color:#222}
+					form{flex: 0 1 auto;min-width:304px;margin: 0 0 24px;padding:32px 0;display:flex;flex-direction:column;background-color:#FFF;box-shadow:0px 4px 8px 0 rgb(0 0 0 / 14%)}
+					a,a:visited{line-height:16px;text-align:center;color:#0058AA;text-decoration:none;font-weight:500}a.logo svg{width:64px;height:32px;border-radius:0;margin-bottom:32px;align-self:center}
+					h1{font-size:1.1em;font-weight:700;text-align:center;margin:0 0 32px;padding:0 32px;}
+					fieldset{border:none;margin:0 0 32px;padding:0 32px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between}
+					input{width:100%;height:48px;display:block;outline:0;padding:0 48px 0 8px;vertical-align:middle;font-size:1em;color:#000;border:1px solid rgba(102,102,102,0.2)}input:active,input:focus{color:#000;border:1px solid #0058AA}
+					button{height:48px;min-height:48px;margin:0 0 16px;width:calc(50% - 8px);color:#000;overflow:hidden;white-space:nowrap;line-height:48px;font-weight:600;padding:0;border:none;cursor:pointer;text-align:center;text-decoration:none} 
+					.primary{background-color:#ff9900}.secondary{background-color:#EEE}
+					.line-row{line-height:16px;display:flex;flex-wrap:wrap;flex-direction:row;justify-content:center;text-align:center}
+					.line-row span{width:2px;height:16px;max-width:2px;margin:0 8px;background-color:rgb(102 102 102 / 20%)}
+					@media screen and (max-width:420px){button{width:calc(100% - 8px)}}
+					@media not screen and (max-width:1136px){a:hover,button:hover{transition:all .3s;}button:hover{background-color:#fef3d6}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="description" content="This is login page">
+        <title>Login page</title>
+        <meta name="theme-color" content="#FAB600">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#FAB600">
+        <meta name="application-name" content="CWP PWA">
+        <meta name="msapplication-TileColor" content="#FAB600">
+        <link rel="shortcut icon" href="favicon-16x16.png">
+			 	<link rel="manifest" href="manifest.json">			
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>
+    <body>
+				<style scoped>
+					main{min-height:100vh;background:#EEE url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='464' height='578' fill='none' viewBox='0 0 464 578'%3E%3Cpath fill='%23ff9900' d='M10 418a32 32 0 01-1-45L341 10c12-13 32-13 45-1s13 32 1 45L55 417a31.997 31.997 0 01-45 1zm186-40a32 32 0 01-3-45l188-212c12-13 32-14 46-3 13 12 14 32 3 45L241 375a31.997 31.997 0 01-45 3zM15 570a31.998 31.998 0 01-3-45l120-126c12-14 32-15 45-3 13 11 15 31 3 45L60 567a31.998 31.998 0 01-45 3zm9-320a31.998 31.998 0 01-3-45L141 79c11-14 32-15 45-3 13 11 15 31 3 44L69 247a31.998 31.998 0 01-45 3zm186 289a32 32 0 01-3-45l201-233c12-13 32-14 45-3a31.999 31.999 0 013 45L255 536a31.997 31.997 0 01-45 3z'/%3E%3C/svg%3E")no-repeat center;background-size:contain;display:flex;flex-direction:column;padding:48px 0;margin:0;justify-content:center;flex-wrap:wrap;align-items:center;align-content:center}
+					@media screen and (max-width:420px){main{padding:8px;background:#EEE}}
+				</style>
+        <main>
+            <form>
+                <a href="index.html" class="logo" aria-label="Test logo">
+									<svg xmlns="http://www.w3.org/2000/svg" width="64" height="32" fill="#ff9900"><path d="M45.34 17.75c.14.15.17.38.1.68-.07.11-.25.2-.52.24-.29.05-.36-.1-.37-.17-.06-.26.22-.66.46-.77.13-.06.29-.04.33.02zm-15.52 3.8c-.12.25-.46.64-.9.98-.54-.86-.01-1.83.54-1.8.43.02.6.28.36.81zm29.24-4.97c-.02.3-.03.57-.13.91-.27-.17-.26-.66-.12-.84.08-.1.2-.1.25-.07z"/><path fill-rule="evenodd" d="M64 16.21v.05c0 .3-.02.6-.07.88-.79 4.9-4.72 6.3-8.85 7.1-4.54.86-39.12 7.09-41.33 7.46-1.97.34-6.88.86-9.85-1.45a7.24 7.24 0 0 1-2.93-5.51c-.18-3.82 1.91-7.7 5.88-10.9a18.73 18.73 0 0 1 7.52-3.4 11.9 11.9 0 0 1 6.46.39l.12.04.08-.1c.94-1.17 2.96-3.15 5.85-3.22 2.42-.06 3.8.92 4.52 1.75a4.82 4.82 0 0 1 1.16 2.71h.15c2.41-.05 23.63-.46 25.6-.46 1.43.01 3.46.18 4.67 1.59A4.75 4.75 0 0 1 64 16.2zM25 14c.35.46 1.01.7 1.85.66 1.2-.05 2.38-.6 2.48-1.85.07-.84-.58-1.7-1.9-1.78-.73-.05-1.4.13-1.88.5-.37.27-.62.65-.73 1.13-.13.54-.07 1 .19 1.34zm36.5 3c-.04-.05-.06-.18-.15-.29-.17.38-.53.78-.84.83l-.15.04c.08-.57.13-.93.13-1.1.03-1.17-.24-2.38-2.06-2.29a3.4 3.4 0 0 0-2.97 3.13v.03l-.02.04c-.27.72-.78 1.75-1.14 1.79a.21.21 0 0 1-.2-.07c-.07-.07-.1-.17-.1-.3 0-.22.1-.57.21-1 .15-.6.27-1.15.33-1.76.13-1.42-.74-1.7-1.64-1.64-.67.05-1.29.45-1.46.65l-.32.37.2-.9-2.03.07-.71 2.9c-.25.33-.6.6-.88.68l-.14.03-.02-.14a2.5 2.5 0 0 0-.06-.45c-.05-.32-.33-1.44-1.41-1.34-2.78.24-2.7 3.69-1.04 3.2l.2-.06-.04.21c-.22 1.37-.8 2.1-1.6 2.2a.4.4 0 0 1-.33-.1c-.14-.13-.23-.38-.21-.68 0-.45.46-2.55 1.34-6.3l-2.58.1-.65 2.76-.09.3c-.1.37-.17.62-.22.88v.03a.13.13 0 0 0-.02.05c-.4 1.06-1.11 2.2-1.66 2.26a.33.33 0 0 1-.27-.08.42.42 0 0 1-.12-.32l.05-.47 1.47-5.36-2.95.06-.26.91c-.07-.75-1.63-1.75-2.81-.68-1.25 1.13-1.59 2.82-1.78 4.49l-.01.06c-.27 2-.74 3.38-2.13 3.56-.31.04-.6.03-.8-.1.47-.37.77-.66 1-1.05.51-.86.28-1.61-.26-1.96-1.07-.72-2.25.15-2.47 1.25-.13.68.11 1.24.32 1.58-.38.22-.67.44-1.18.52a.84.84 0 0 1-.72-.26c-.3-.41.11-1.76.17-1.93l2.02-6.05-4.02.14c-.12.36-.57 1.75-1.03 3.04-.9 2.51-3.5 5.94-6.19 6.64-1.43.38-2.55.31-3.26-.13-.97-.6-1.52-2.03-1.15-4.03.27-1.42.5-1.94.88-2.75 2.25-4.8 5.87-3.72 5.64-3.35-.24.07-.47.18-.68.3-.58.31-1.51 1.22-1.55 2.35-.02.72.17 1.31.57 1.7.38.37.94.55 1.58.49a2.85 2.85 0 0 0 2.64-2.82 2.8 2.8 0 0 0-.71-2.1c-.8-.83-1.74-1.26-3.84-1.2-3.23.1-8.15 2.42-9.57 7.57a5.2 5.2 0 0 0 1.19 4.78c1.44 1.32 3.23 1.81 6.35 1.22 2.8-.53 5.08-2.44 6.76-4.44v.1c-.4 1.46.13 3.03 2.58 2.72a9.4 9.4 0 0 0 4.07-1.7c.57.5 1.56.8 2.7.63.46-.07 1.65-.4 2.7-1.89.82-1.19 1.24-3.5 1.46-4.75.1-.58.18-.97.27-1.13.08-.15.15-.33.37-.43.43-.18.66.25.57.57l-.54 1.92-.09.24c-.26.79-.56 1.67-.59 2.6-.02.68.16 1.22.52 1.55.33.32.8.44 1.36.35 1.54-.23 2.63-1.79 3.15-2.7l.07-.13.11-.18.06.35c.25 1.36 1.31 1.9 2.92 1.67 2.08-.31 3.34-1.4 3.72-3.29l.02-.08.07-.02c.2-.07.39-.17.58-.3l.15-.11-.74 3.03 2.4-.4c.04-.12.33-1.4.9-3.85.15-.64.56-1.85 1.03-1.88a.3.3 0 0 1 .25.1c.1.12.15.3.15.48-.01.4-.14.86-.29 1.37-.17.63-.35 1.4-.42 2.15-.12 1.28.95 1.27 1.27 1.22.75-.11 1.76-.5 2.61-2.4l.05.21a1.87 1.87 0 0 0 2.12 1.52 3.04 3.04 0 0 0 2.48-1.93l.04-.07.07-.01c.47-.05 1.12-.6 1.29-1.24z" clip-rule="evenodd"/><path d="M58.91 14.79c.17.18.24.53.19.95v.05c-.56.02-.86.44-.92 1.27-.03.49.15.86.57 1.1l-.04.15c-.18.53-.41 1.1-.88 1.15-.16.02-.3 0-.39-.1-.15-.14-.22-.28-.21-.75.02-1.12.6-3.9 1.4-3.95a.35.35 0 0 1 .28.13zM5.56 12.13c-.1.14-.38.44-.75.72-1.22.9-2.64.95-3.98-.27-1.26-1.15-1.11-3 .65-4.3.4-.28.82-.47 1.03-.53.15.37.31.73.47 1.08a2.53 2.53 0 0 0-.67.35c-.78.57-.76 1.44-.12 2.15.67.73 1.46.87 2.1.4.2-.14.36-.29.46-.46l.8.86zM4.07 5.02c.24.4 0 .9-.52 1.22-.46.28-1.02.27-1.27-.13-.28-.4-.02-.95.47-1.25.53-.32 1.09-.27 1.32.16zm2.04 6.84-3-4.57c.54-.36 1.1-.7 1.66-1l2.64 4.78c-.45.25-.88.5-1.3.79zm.17-6.35a25.19 25.19 0 0 1 2.2-.9c.36.48.71.97 1.06 1.47.27.4.52.77.9 1.4h.03c-.05-.72-.09-1.19-.1-1.66a48.61 48.61 0 0 1 0-1.82 25.11 25.11 0 0 1 2.32-.51c.47 1.77.9 3.54 1.3 5.33-.47.07-.93.16-1.38.26l-.49-1.85A65.15 65.15 0 0 1 11.54 5h-.03l.01 2.33c0 .64.01 1.29.04 1.93-.4.11-.79.23-1.17.37A44.53 44.53 0 0 0 9.3 8c-.35-.51-.97-1.43-1.3-1.89l-.03.01.81 2.18.66 1.78c-.42.18-.83.37-1.24.57A132.02 132.02 0 0 1 6.27 5.5z"/><path fill-rule="evenodd" d="M20.17 8.84a20.5 20.5 0 0 0-1.47-.18l.18-2.14-.15-.02a.8.8 0 0 0-.46.08c-.5.21-.65.95-.85 1.6-.05.15-.1.28-.17.4a20.02 20.02 0 0 0-1.58.05c.1-.18.2-.38.25-.62.13-.49.27-1.21.68-1.62.16-.15.42-.3.76-.38V6c-.8-.16-1.52-.52-1.56-1.31-.03-.54.26-.92.77-1.2.48-.27 1.43-.4 2.43-.32.82.06 1.57.2 2.03.33l-.86 5.35zM19.1 4.12a2.15 2.15 0 0 0-.4-.06c-.65-.05-1.05.2-1.07.68 0 .48.45.84 1.1.89h.24l.13-1.5z" clip-rule="evenodd"/><path d="M16.42 0c-.41 1-.98 2-1.5 2.85l-.93.2c.28-.95.58-1.96.68-2.84.58-.09 1.16-.16 1.75-.21z"/></svg>
+                </a>
+								<h1>Привіт Перевершнику</h1>
+                <fieldset>
+                    <input type="text" placeholder="Логін" required autocomplete="name">
+                </fieldset>
+                <fieldset>
+                    <input type="password" placeholder="Пароль" required autocomplete="current-password">
+                </fieldset>
+                <fieldset>
+                    <button class="primary" formaction="index.html">Вхід</button>
+                    <button class="secondary" formaction="index.html">Вхід за sso</button>
+                </fieldset>
+                <div class="line-row">
+                    <a href="index.html">Забули логін?</a><span></span><a href="index.html">Забули пароль?</a>
+                </div>
+            </form>
+        </main>
+				<script>if("serviceWorker"in navigator){window.addEventListener("load",async() =>{try{const reg = await navigator.serviceWorker.register("sw.js");console.log("Service worker registered!",reg);}catch(err){console.log("Service worker registration failed:",err);}});}</script>
+    </body>
+</html>

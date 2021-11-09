@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+					* {box-sizing:border-box;border-radius:8px}
+					body{font:14px system-ui,sans-serif;margin:0;color:#222}
+					form{flex: 0 1 auto;min-width:304px;margin: 0 0 24px;padding:32px 0;display:flex;flex-direction:column;background-color:#FFF;box-shadow:0px 4px 8px 0 rgb(0 0 0 / 14%)}
+					a,a:visited{line-height:16px;text-align:center;color:#0058AA;text-decoration:none;font-weight:500}a.logo svg{width:64px;height:64px;border-radius:0;margin-bottom:24px;align-self:center}
+					h1{font-size:1.1em;font-weight:700;text-align:center;margin:0 0 32px;padding:0 32px;}
+					fieldset{border:none;margin:0 0 32px;padding:0 32px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between}
+					input{width:100%;height:48px;display:block;outline:0;padding:0 48px 0 8px;vertical-align:middle;font-size:1em;color:#000;border:1px solid rgba(102,102,102,0.2)}input:active,input:focus{color:#000;border:1px solid #0058AA}
+					button{height:48px;min-height:48px;margin:0 0 16px;width:calc(50% - 8px);overflow:hidden;white-space:nowrap;line-height:48px;font-weight:600;padding:0;border:none;cursor:pointer;text-align:center;text-decoration:none} 
+					.primary{background-color:#165788;color:#fff}.secondary{background-color:#EEE}
+					.line-row{line-height:16px;display:flex;flex-wrap:wrap;flex-direction:row;justify-content:center;text-align:center}
+					.line-row span{width:2px;height:16px;max-width:2px;margin:0 8px;background-color:rgb(102 102 102 / 20%)}
+					@media screen and (max-width:420px){button{width:calc(100% - 8px)}}
+					@media not screen and (max-width:1136px){a:hover,button:hover{transition:all .3s;}button:hover{background-color:#fef3d6;color:#000}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="description" content="This is login page">
+        <title>Login page</title>
+        <meta name="theme-color" content="#FAB600">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#FAB600">
+        <meta name="application-name" content="CWP PWA">
+        <meta name="msapplication-TileColor" content="#FAB600">
+        <link rel="shortcut icon" href="favicon-16x16.png">
+			 	<link rel="manifest" href="manifest.json">			
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>
+    <body>
+				<style scoped>
+					main{min-height:100vh;background:#EEE url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='464' height='578' fill='none' viewBox='0 0 464 578'%3E%3Cpath fill='%23BECED9' d='M10 418a32 32 0 01-1-45L341 10c12-13 32-13 45-1s13 32 1 45L55 417a31.997 31.997 0 01-45 1zm186-40a32 32 0 01-3-45l188-212c12-13 32-14 46-3 13 12 14 32 3 45L241 375a31.997 31.997 0 01-45 3zM15 570a31.998 31.998 0 01-3-45l120-126c12-14 32-15 45-3 13 11 15 31 3 45L60 567a31.998 31.998 0 01-45 3zm9-320a31.998 31.998 0 01-3-45L141 79c11-14 32-15 45-3 13 11 15 31 3 44L69 247a31.998 31.998 0 01-45 3zm186 289a32 32 0 01-3-45l201-233c12-13 32-14 45-3a31.999 31.999 0 013 45L255 536a31.997 31.997 0 01-45 3z'/%3E%3C/svg%3E")no-repeat center;background-size:contain;display:flex;flex-direction:column;padding:48px 0;margin:0;justify-content:center;flex-wrap:wrap;align-items:center;align-content:center}
+					@media screen and (max-width:420px){main{padding:8px;background:#EEE}}
+				</style>
+        <main>
+            <form>
+                <a href="index.html" class="logo" aria-label="Test logo">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="#03568E" viewBox="0 0 64 64"><path d="M9.85 58.77v5.16h-.74v-4.5H6.64v2.89c0 .96-.38 1.67-1.4 1.67L5 63.98l-.11-.68h.17c.77 0 .83-.41.83-1.19v-3.34h3.95z"/><path fill-rule="evenodd" d="M14.8 58.71c1.7 0 2.78 1.21 2.78 2.65 0 1.39-1.04 2.64-2.79 2.64a2.63 2.63 0 0 1-2.75-2.64c0-1.43 1.1-2.65 2.77-2.65zm0 4.61c1.16 0 2.02-.84 2.02-1.96 0-1.14-.86-1.97-2.01-1.97s-2 .83-2 1.97c0 1.12.85 1.96 2 1.96z" clip-rule="evenodd"/><path d="M20.53 63.93h-.74v-5.15h3.07v.67h-2.33v4.48zm5.12 0h-.74v-5.15h.74v5.15zm6.82-4a3.4 3.4 0 0 0-1.77-.54c-1.18 0-2.06.84-2.06 1.97 0 1.16.85 1.96 2.09 1.96.58 0 1.21-.2 1.8-.58v.8a3.78 3.78 0 0 1-1.87.46 2.63 2.63 0 0 1-2.78-2.57c0-1.57 1.19-2.72 2.83-2.72.52 0 1.06.13 1.76.43v.79zm6.3-.48H37v4.48h-.74v-4.48h-1.78v-.67h4.3v.66zm2.1-.67h.73v4l3.3-4h.62v5.15h-.74v-4l-3.3 4h-.62v-5.15zm8.08 2.26c.47 0 .69-.28.95-1 .3-.85.63-1.33 1.15-1.33.2 0 .39.04.5.07v.63a1.5 1.5 0 0 0-.33-.05c-.35 0-.48.33-.67.85-.2.49-.43.95-.77 1.12.55.18 1.05.95 1.44 1.58.22.36.32.54.66 1.02h-.85l-.68-1.06c-.68-1.07-1.02-1.17-1.4-1.17h-.29v2.23h-.73v-5.15h.73v2.26h.3z"/><path fill-rule="evenodd" d="M58.67 63.93h-.76l-.69-1.52h-2.19l-.65 1.52h-.75l2.21-5.18h.52l2.3 5.18zm-3.35-2.18h1.6l-.83-1.87-.77 1.87z" clip-rule="evenodd"/><path d="M17.84 40.12c-.41.18-.75.25-1.17.25-.94 0-1.64-.66-1.64-1.55 0-.9.71-1.59 1.65-1.59.36 0 .61.06 1.09.26v.44a2.3 2.3 0 0 0-1.1-.3 1.17 1.17 0 0 0-1.18 1.19c0 .68.51 1.15 1.24 1.15.24 0 .45-.06.67-.12v-.63h-.6v-.4h1.04v1.3z"/><path fill-rule="evenodd" d="M22.5 37.27h.78c.62 0 1 .33 1 .86 0 .35-.18.61-.5.75.27.18.44.46.68.84.12.22.2.32.41.61h-.52l-.4-.63c-.41-.63-.6-.7-.82-.7h-.18v1.33h-.44v-3.06zm.45 1.34h.28c.47 0 .6-.25.6-.5 0-.29-.17-.46-.6-.46h-.28v.96zm7.85-1.38c1.01 0 1.65.72 1.65 1.57 0 .83-.62 1.57-1.65 1.57a1.57 1.57 0 1 1 0-3.14zm0 2.73c.69 0 1.2-.5 1.2-1.16 0-.67-.51-1.17-1.2-1.17-.68 0-1.19.5-1.19 1.17 0 .67.5 1.17 1.19 1.17z" clip-rule="evenodd"/><path d="M37.5 37.27v1.8c0 .63.33.9.84.9.67 0 .91-.33.91-.92v-1.78h.44v1.85c0 .76-.45 1.25-1.36 1.25-.65 0-1.27-.36-1.27-1.2v-1.9h.44z"/><path fill-rule="evenodd" d="M44.63 37.27h.96c.67 0 .97.4.97.88s-.32.86-1.03.86h-.46v1.32h-.44v-3.06zm.44 1.34h.5c.33 0 .54-.17.54-.48 0-.22-.12-.47-.52-.47h-.52v.95z" clip-rule="evenodd"/><path d="M19.55 27.92h-3.28v1.99h2.53v.92h-2.53v3.33h-1.04V27h4.32v.92z"/><path fill-rule="evenodd" d="M23.68 26.9c2.37 0 3.86 1.69 3.86 3.68 0 1.93-1.45 3.68-3.88 3.68a3.66 3.66 0 0 1-3.82-3.68c0-1.98 1.52-3.67 3.84-3.67zm0 6.41c1.62 0 2.8-1.17 2.8-2.73a2.68 2.68 0 0 0-2.8-2.73 2.68 2.68 0 0 0-2.78 2.73 2.69 2.69 0 0 0 2.78 2.73z" clip-rule="evenodd"/><path d="m34.03 27-4.55 6.24h4.55v.92h-6.45l4.55-6.24h-4.27V27h6.17zm7.38 0-4.56 6.24h4.56v.92h-6.46l4.56-6.24h-4.28V27h6.18zm1.8 0 1.93 2.47L47.1 27h1.24l-2.67 3.38v3.78h-1.03v-3.79L41.97 27h1.24z"/><path fill-rule="evenodd" d="M48.31 2.42v1.46a21.15 21.15 0 0 1-13.08 7.68v7.97H31.7v-1.44h2.08v-6.34a21.3 21.3 0 0 1-4 0v12.07h-1.44V11.56a21.15 21.15 0 0 1-13.1-7.68V2.42h14.54v7.88a20.1 20.1 0 0 0 4 0V2.41l14.53.01zm-19.97 7.69V3.79H17.06a19.67 19.67 0 0 0 11.28 6.32zM46.5 3.79H35.22v6.32A19.69 19.69 0 0 0 46.5 3.79zm4.66-2.59a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM49 1.2c0 .54.44.97.97.97a.97.97 0 0 0 .97-.97.97.97 0 0 0-1.94 0zm.43-.63h.62c.28 0 .41.15.41.36 0 .2-.13.33-.34.35v.01c.1.04.14.07.27.3l.15.26h-.32l-.1-.21c-.1-.2-.2-.32-.33-.32h-.1v.53h-.26V.57zm.26.55h.26c.18 0 .24-.09.24-.18 0-.11-.1-.17-.27-.17h-.23v.35z" clip-rule="evenodd"/><path d="M64 53H0v-1.07h64V53z"/></svg>
+                </a>
+								<h1>Привіт Перевершнику</h1>
+                <fieldset>
+                    <input type="text" placeholder="Логін" required autocomplete="name">
+                </fieldset>
+                <fieldset>
+                    <input type="password" placeholder="Пароль" required autocomplete="current-password">
+                </fieldset>
+                <fieldset>
+                    <button class="primary" formaction="index.html">Вхід</button>
+                    <button class="secondary" formaction="index.html">Вхід за sso</button>
+                </fieldset>
+                <div class="line-row">
+                    <a href="index.html">Забули логін?</a><span></span><a href="index.html">Забули пароль?</a>
+                </div>
+            </form>
+        </main>
+				<script>if("serviceWorker"in navigator){window.addEventListener("load",async() =>{try{const reg = await navigator.serviceWorker.register("sw.js");console.log("Service worker registered!",reg);}catch(err){console.log("Service worker registration failed:",err);}});}</script>
+    </body>
+</html>
