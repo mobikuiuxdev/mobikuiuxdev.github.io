@@ -1,5 +1,5 @@
-const cacheName = '5-version-11';
-const precacheResources = ['manifest.json','login_a.html','login_d.html','login_z.html','login_y.html'];
+const cacheName = '6-version-11';
+const precacheResources = ['icon-192x192.png','icon-512x512.png','manifest.json'];
 self.addEventListener('install', (event)=>{
     console.log('Service worker install event!');
     event.waitUntil(caches.open(cacheName).then((cache)=>cache.addAll(precacheResources)));
