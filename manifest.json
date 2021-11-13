@@ -1,5 +1,2 @@
-{"name":"CWP PWA", "short_name": "CWP", "start_url": "/", "display": "browser", "background_color": "#fab600", "theme_color": "#fab600", "icons":[{ "src": "icon-192x192.png", "type": "image/png", "sizes": "192x192" },{"src": "icon-192x192.png","type": "image/png", "sizes": "512x512"},{"src":"icon-192x192.png","type":"image/png", "sizes": "192x192","purpose": "maskable" }]}
-
-
-
-
+{"name":"CWP PWA", "short_name": "CWP", "start_url": "/", "display": "browser", "background_color": "#fab600", "theme_color": "#fab600", "icons": [ { "src": "icon-192x192.png", "type": "image/png", "sizes": "192x192" },{"src": "icon-192x192.png","type": "image/png", "sizes": "512x512"}, {"src": "icon-192x192.png","sizes": "192x192", "type": "image/png","purpose": "any"},
+{"src":"icon-192x192.png","type":"image/png", "sizes": "192x192", "purpose": "maskable" } ] }
