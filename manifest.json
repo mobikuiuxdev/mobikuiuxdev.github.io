@@ -7,7 +7,7 @@
   "theme_color": "#fab600",
   "icons": [
     {
-      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='%23FAB600' d='M0 0h192v192H0z'/%3E%3Cpath fill='%23000' fill-rule='evenodd' d='m96 19 77 77-77 77-77-77 77-77zm0 120L53 96l43-43 43 43-43 43z' clip-rule='evenodd'/%3E%3C/svg%3E",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='%23FAB600' d='M0 0h512v512H0z'/%3E%3Cpath fill='%23000' fill-rule='evenodd' d='m96 19 77 77-77 77-77-77 77-77zm0 120L53 96l43-43 43 43-43 43z' clip-rule='evenodd'/%3E%3C/svg%3E",
       "type": "image/svg",
       "sizes": "192x192"
     },
