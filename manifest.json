@@ -7,17 +7,17 @@
 "icons":[
 {
 "src":"data:image/svg+xml,%3Csvg width='192' height='192' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FAB600' d='M0 0h192v192H0z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m96 19 77 77-77 77-77-77 77-77Zm0 120L53 96l43-43 43 43-43 43Z' fill='%23000'/%3E%3C/svg%3E",
-"type":"image/svg",
+"type":"mage/svg+xml",
 "sizes":"192x192"
 },
 {
 "src":"data:image/svg+xml,%3Csvg width='512' height='512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FAB600' d='M0 0h512v512H0z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m256 51 205 205-205 205L51 256 256 51Zm0 344L117 256l139-139 139 139-139 139Z' fill='%23000'/%3E%3C/svg%3E",
-"type":"image/svg",
+"type":"mage/svg+xml",
 "sizes":"512x512"
 },
 {
 "src":"data:image/svg+xml,%3Csvg width='192' height='192' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FAB600' d='M0 0h192v192H0z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m96 19 77 77-77 77-77-77 77-77Zm0 120L53 96l43-43 43 43-43 43Z' fill='%23000'/%3E%3C/svg%3E",
-"type":"image/svg",
+"type":"mage/svg+xml",
 "sizes":"192x192",
 "purpose":"maskable"
 }]}
