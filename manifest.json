@@ -2,7 +2,7 @@
 "name":"Custom pages MVP",
 "icons":[
 {"src":"icon-192x192.svg","sizes":"192x192","type":"image/svg+xml","purpose":"maskable"},
-{"src":"icon-192x192.svg","sizes":"192x192","type":"iimage/svg+xml"},
+{"src":"icon-192x192.svg","sizes":"192x192","type":"image/svg+xml"},
 {"src":"icon-512x512.png","sizes":"512x512","type":"image/png"}
 ],
 "start_url":"/",
