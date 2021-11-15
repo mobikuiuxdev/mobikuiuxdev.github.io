@@ -1,7 +1,7 @@
 {"short_name":"CP MVP",
 "name":"Custom pages MVP",
 "icons":[
-{"src":"icon-512x512.svg","sizes":"192x192","type":"image/svg+xml","purpose":"maskable"},
+{"src":"icon-192x192.svg","sizes":"192x192","type":"image/svg+xml","purpose":"maskable"},
 {"src":"icon-512x512.svg","sizes":"512x512","type":"image/svg+xml"}
 ],
 "start_url":"/",
