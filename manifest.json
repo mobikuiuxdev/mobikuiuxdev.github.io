@@ -11,5 +11,4 @@
 "theme_color":"#fab600",
 "description":"MVP of custom pages",
 "orientation":"any",
-"shortcuts":[{"name":"Login page","url":"login","description":"MVP of custom pages"}],
 "categories": ["productivity"]}
