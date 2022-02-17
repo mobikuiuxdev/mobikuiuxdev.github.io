@@ -1,6 +1,6 @@
 {"name":"CWP PWA",
 "short_name":"CWP",
-"start_url":"index.html",
+"start_url":"/",
 "display":"standalone",
 "background_color":"#FAB600",
 "theme_color":"#FAB600",
