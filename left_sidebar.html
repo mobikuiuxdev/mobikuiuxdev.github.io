@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="manifest" href="manifest.json">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<style>	*{box-sizing:border-box;}html{height:100%;font-family:system-ui,sans-serif;font-size:15px;color:#000;}body{background-color:#FFF;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-content:stretch;align-items:flex-start;min-height:100vh;margin:0;}aside,main{margin:0;align-self:stretch;}aside{display:flex;background:#FFF;flex:0 1 256px;padding:0;border-right:1px solid #DDD;}main{display:flex;flex:1;margin:0;background:#f5f5f5;flex-direction:column;}
 				header{height:56px;}h1{width:100%;font-size:1.6em;font-weight:500;line-height:64px;padding:0 8px;text-align:left;}a{text-decoration:none;font-weight:500;}nav{display:flex;flex-direction:column;justify-content:flex-start;position:fixed;top:64px;left:0;width:100%;max-width:256px;height:100%;}nav a{font-size:.9em;display:flex;align-items:center;line-height:56px;color:#000;padding-left:16px;margin-right:16px;}
 			#selected,.selected{color:#000;background-color:#fab600;border-radius:0 50px 50px 0;}.sub-item{padding-left:64px;} #menu-toggle,.menu-close,.menu-open{display:none;width:0;}
@@ -79,6 +80,7 @@
 			.box-content a:hover{color:#f90}}
 			@media(max-width:1136px){.box-50,.box-100{width:calc(100% - 16px)}}
 			@media(max-width:960px){html{font-size:14px;}body{flex-direction:column}aside{flex:0;}h1{text-align:center}.box-50{width:calc(50% - 16px)}.wrap-aside{height:56px;background:#FFF;box-shadow:0 2px 4px 0 rgb(0 0 0 / 8%);justify-content:space-between;margin:0;padding:16px 24px;}nav{top:0;background:#FFF;transform:translateX(-100%);transition:.3s;}nav a{line-height:48px}.menu-open{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 19h16v-2H4v2zm0-6h16v-2H4v2zm0-8v2h16V5H4z' fill='%23595959'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer;width:24px;height:24px;}.menu-close{display:none;}#menu-toggle:checked~.menu-open{display:none;}#menu-toggle:checked~.menu-close{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.5L17.5 5 12 10.5 6.5 5 5 6.5l5.5 5.5L5 17.5 6.5 19l5.5-5.4 5.5 5.4 1.5-1.5-5.5-5.5L19 6.5z' fill='%23FFFFFF'/%3E%3C/svg%3E") no-repeat center;display:block;cursor:pointer;width:24px;height:24px;z-index:1000;}.overlay{display:none;}#menu-toggle:checked~.overlay{display:block;position:fixed;top:0;left:0;height:100%;width:100%;background-color:rgba(0,0,0,.72);}#menu-toggle:checked~nav{transform:translateX(0);list-style:none;}}@media(max-width:768px){aside,main{flex:1 1 auto;width:100%;max-width:100%;}.wrap{padding:0 8px 16px}.box-50{width:calc(100% - 16px);}}
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {header{box-shadow:1px 2px #DDDDDD;}.box-30-widget,.box-50-widget,.box-70-widget,.box-100-widget{box-shadow:1px 2px #DDDDDD;}.box-50-widget{background-color:#333333);box-shadow:1px 2px #DDDDDD;}.widget-box{box-shadow:1px 2px #DDDDDD;}}
 		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>CUSTOM</title>		
