@@ -103,7 +103,7 @@ video{width:100%;height:auto;border-radius:8px}
 .box-30-widget,.box-50-widget,.box-70-widget,.box-100-widget{min-height:240px;overflow:hidden;display:flex;flex-direction:column;border-radius:8px;background-color:#FFF;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%);}
 		.box-100-widget{width:calc(100% - 16px);height:320px;max-height:320px;background-color: #fab600;overflow:hidden;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}	
 .video-box{border-radius:8px;background-color:#000000}	
-		.widget-box{display:flex;flex-direction:column;border-radius:8px;background-color:#FFFFFF;box-shadow:0 1px 2px 0 rgba(0,0,0,0.08);min-height:240px;overflow:hidden}
+		.widget-box{display:flex;flex-direction:column;border-radius:8px;background-color:#FFFFFF;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%);min-height:240px;overflow:hidden}
 		.box-head{display:flex;align-items:center;padding:0 16px;margin-bottom:8px;border-bottom:1px solid #DDDDDD;}
 		.box-content,.box-content-calendar,.box-content-empty{display:flex;flex-direction:column;padding:0 16px 24px 16px;margin:0;align-content:space-between;}
 		.box-head span{line-height:56px;text-align:left;font-weight:600;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -153,7 +153,10 @@ video{width:100%;height:auto;border-radius:8px}
 		@media(max-width:1024px){body{font-size:14px}.header-row{padding:0 16px;}.flex-wrap,.wrap{padding:0 8px;}.box-30,.box-30-widget,.box-50-widget{width:calc(50% - 16px);margin:0 8px 16px}.box-70,.box-70-widget{width:calc(100% - 16px);margin:0 8px 16px;}}
 		@media(max-width:800px){.flex-wrap,.buttons{flex-direction:column;}.box-30,.box-50,.box-30-widget,.box-50-widget,.box-100-widget,.primary,.secondary{width:calc(100% - 16px)}}
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-		.box-30-widget,.box-50-widget,.box-70-widget,.box-100-widget{box-shadow:1px 2px #DDDDDD;}}
+		header{box-shadow:1px 2px #DDDDDD;}
+		.box-30-widget,.box-50-widget,.box-70-widget,.box-100-widget{box-shadow:1px 2px #DDDDDD;}
+		.box-50-widget{background-color:#333333);box-shadow:1px 2px #DDDDDD;}.widget-box{box-shadow:1px 2px #DDDDDD;}
+		}
 		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>CUSTOM</title>		
