@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="manifest" href="manifest.json">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<style>
 		* {box-sizing:border-box}
 		html,body{height:100%;min-height:100vh;margin:0;background-color:#f5f5f5;color:#000;font-family:system-ui,sans-serif;font-size:15px}
@@ -97,9 +98,9 @@
 		.box-30,.box-50-widget{width: calc(33.333% - 16px);}
 		.box-50,.box-50-widget{width: calc(50% - 16px);}
 		.box-70,.box-70-widget{width: calc(66.667% - 8px);}
-		.box-30,.box-50,.box-70,.box-100,.box-50-widget,.box-50-widget,.box-70-widget,.box-100-widget{align-self:stretch;margin: 0 0 24px;}	.box-50-widget,.box-50-widget,.box-70-widget,.box-100-widget{min-height:240px;overflow:hidden;display:flex;flex-direction:column;border-radius:8px;background-color:#FFF;box-shadow:0 1px 2px 0 rgba(0,0,0,0.08);margin:8px}
-		.box-100-widget{width:calc(100% - 4px);height:320px;max-height:320px;background-color: #fab600;overflow:hidden;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%),1px 2px 2px 0 rgb(0 0 0 / 16%)}		
-		.widget-box{display:flex;flex-direction:column;border-radius:8px;background-color:#FFFFFF;box-shadow:0 1px 2px 0 rgba(0,0,0,0.08);min-height:240px;overflow:hidden;}
+		.box-30,.box-50,.box-70,.box-100,.box-50-widget,.box-50-widget,.box-70-widget,.box-100-widget{align-self:stretch;margin: 0 0 24px;}	.box-50-widget,.box-50-widget,.box-70-widget,.box-100-widget{min-height:240px;overflow:hidden;display:flex;flex-direction:column;border-radius:8px;background-color:#FFF;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%);margin:8px}
+		.box-100-widget{width:calc(100% - 4px);height:320px;max-height:320px;background-color: #fab600;overflow:hidden;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}		
+		.widget-box{display:flex;flex-direction:column;border-radius:8px;background-color:#FFFFFF;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%);min-height:240px;overflow:hidden;}
 		.box-100{width:calc(100% - 16px);margin:8px 8px 32px;min-height:104px;padding-bottom:0px}
 		.box-head{display:flex;align-items:center;padding:0 16px;margin-bottom:8px;border-bottom:1px solid #DDDDDD;}
 		.box-content,.box-content-calendar,.box-content-empty{display:flex;flex-direction:column;padding:0 16px 24px 16px;margin:0;align-content:space-between;}
@@ -151,10 +152,7 @@
 		details a:hover{background-color:rgba(250,182,0,.32);border-radius:0;}.box-content a:hover{color:#f90;}}
 		@media(max-width:1024px){body{font-size:14px}.header-row,.flex-wrap,.wrap{padding:0 8px;}.box-30,.box-50-widget,.box-50-widget{width:calc(50% - 16px)}.box-70,.box-70-widget{width:calc(100% - 16px);margin:0 0 16px;}.box-100-widget{width:100%;margin:0 0 16px;}}
 		@media(max-width:800px){.flex-wrap,.buttons{flex-direction:column;}.box-30,.box-50,.box-50-widget,.box-50-widget,.box-100,.box-100-widget,.primary,.secondary{width:calc(100% - 8px)}}
-		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-		header{box-shadow:1px 2px #DDDDDD;}
-		.box-30-widget,.box-50-widget,.box-70-widget,.box-100-widget{box-shadow:1px 2px #DDDDDD;}
-		.box-50-widget{background-color:#333333);box-shadow:1px 2px #DDDDDD;}.widget-box{box-shadow:1px 2px #DDDDDD;}}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {header{box-shadow:1px 2px #DDDDDD;}.box-30-widget,.box-50-widget,.box-70-widget,.box-100-widget{box-shadow:1px 2px #DDDDDD;}.box-50-widget{background-color:#333333);box-shadow:1px 2px #DDDDDD;}.widget-box{box-shadow:1px 2px #DDDDDD;}}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CUSTOM</title>		
