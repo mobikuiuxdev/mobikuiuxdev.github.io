@@ -147,7 +147,9 @@ video{width:100%;height:auto;border-radius:8px}
 .box-70-widget,
 .box-100-widget{min-height:240px;background-color:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;border-radius:8px;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}	
 .widget-box{margin:0 8px 16px;padding:16px;background-color:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;align-self:stretch;border-radius:8px;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}
-.hero-box{height:320px;max-height:320px;overflow:hidden;display:flex;flex-direction:column;border-radius:8px;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}
+.controls-box{margin:0 8px 16px;padding:16px;background-color:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;align-self:stretch;border-radius:8px;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}
+
+.hero-box{max-height:320px;overflow:hidden;display:flex;flex-direction:column;border-radius:8px;box-shadow:0 1px 2px 0 rgb(0 0 0 / 8%)}
 .video-box{border-radius:8px;background-color:#000000}	
 
 .box-head{display:flex;align-items:center;padding:0 16px;margin-bottom:8px;border-bottom:1px solid #DDDDDD}
@@ -225,18 +227,18 @@ a.today{border:1px solid #0058aa}.calendar a:hover{background-color:rgb(0 0 0 / 
 .disable{color:#666666;font-weight:500}
 
 /* COLUMNS TOGGLE */
-.row-30{padding:2px;min-height:48px;margin:48px 0;display:flex;align-items:center;justify-content:space-around;border-radius:24px;background-color:#FFF;box-shadow:0 1px 2px 0 rgba(0,0,0,0.08);overflow:hidden}
+.row-30{width:96px;padding:2px;min-height:48px;margin:0;display:flex;align-items:center;justify-content:space-around;overflow:hidden}
 .lm,.dm{margin:0;display:flex;align-items:center;line-height:48px;border-radius:22px;}
-.lm{background-color:#fab600}
-.dm{background-color:transparent}
+/* .lm{background-color:#fab600} */
+.dm{background-color:transparent;opacity:.1}
 .lm span,.dm span{width:40px;height:40px;cursor:pointer}
 .dm span{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M1 0h22l1 1v22l-1 1H1l-1-1V1l1-1zm10 22H2V2h9v20zM22 2v20h-9V2h9z' clip-rule='evenodd'/%3E%3C/svg%3E%0A") no-repeat center}
 .lm span{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M1 0h22l1 1v22l-1 1H1l-1-1V1l1-1zm6 22H2V2h5v20zM9 2v20h6V2H9zm13 0v20h-5V2h5z' clip-rule='evenodd'/%3E%3C/svg%3E%0A")no-repeat center}
 input[type="checkbox"]#color-toggle{display:none} #color-toggle:checked~.dm{display:none}
 #color-toggle:checked ~ .box-30-widget {width:calc(50% - 16px)}
-#color-toggle:checked ~ .row-30 > .lm{background-color:transparent}
-#color-toggle:checked ~ .row-30 > .dm{background-color:#fab600}
-
+#color-toggle:checked ~ .box-100 > .row-30 > .lm{background-color:transparent;opacity:.1}
+#color-toggle:checked ~ .box-100 > .row-30 > .dm{opacity:1}
+/* COLUMNS TOGGLE END */
 
 
 
@@ -252,16 +254,18 @@ nav a:hover{background-color:#fef3d6;border-radius:0 50px 50px 0}
 details a:hover{background-color:rgba(250,182,0,.32);border-radius:0}
 a:hover{color:#f90}nav a:hover{color:#000}}
 @media(max-width:1024px){body{font-size:14px}
-.header-row{padding:0 16px}
+.header-row{padding:0 40px}
 .flex-wrap,
-.wrap{padding:0 8px}
+.wrap{padding:0 32px}
+#color-toggle:checked ~ .box-30-widget,
 .box-30,
 .box-30-widget,
 .box-50-widget{width:calc(50% - 16px);margin:0 8px 16px}
 .box-70,.box-70-widget{width:calc(100% - 16px);margin:0 8px 16px;}}
-@media(max-width:800px){
+@media(max-width:768px){
 .flex-wrap,
 .buttons{flex-direction:column}
+#color-toggle:checked ~ .box-30-widget,
 .box-30,
 .box-50,
 .box-30-widget,
@@ -269,6 +273,10 @@ a:hover{color:#f90}nav a:hover{color:#000}}
 .box-100-widget,
 .primary,
 .secondary{width:calc(100% - 16px)}}
+@media(max-width:480px){
+.header-row{padding:0 16px}
+.flex-wrap,
+.wrap{padding:0 8px}}
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
 header{box-shadow:1px 2px #DDDDDD}
 .box-30-widget,
